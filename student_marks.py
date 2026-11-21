@@ -30,3 +30,4 @@ if m1 >= 35 and m2 >= 35 and m3 >= 35 and m4 >= 35 and m5 >= 35:
     print("Result: PASS")
 else:
     print("Result: FAIL")
+
