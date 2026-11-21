@@ -1,13 +1,20 @@
-
 # Student Marks Calculator
 
 name = input("Enter student name: ")
 
-m1 = int(input("Enter Tamil marks: "))
-m2 = int(input("Enter English marks: "))
-m3 = int(input("Enter Maths marks: "))
-m4 = int(input("Enter Science marks: "))
-m5 = int(input("Enter Computer marks: "))
+def get_mark(subject):
+    while True:
+        mark = int(input("Enter " + subject + " marks: "))
+        if 0 <= mark <= 100:
+            return mark
+        else:
+            print("Invalid marks! Enter 0 to 100.")
+
+m1 = get_mark("Tamil")
+m2 = get_mark("English")
+m3 = get_mark("Maths")
+m4 = get_mark("Science")
+m5 = get_mark("Computer")
 
 total = m1 + m2 + m3 + m4 + m5
 average = total / 5
@@ -15,7 +22,7 @@ percentage = (total / 500) * 100
 
 print("\n--- Student Result ---")
 print("Name:", name)
-print("Total Marks:", total, "/ 500")
+print("Total:", total, "/ 500")
 print("Average:", average)
 print("Percentage:", percentage, "%")
 
